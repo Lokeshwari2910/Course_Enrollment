@@ -14,6 +14,7 @@
     <groupId>com.example</groupId>
     <artifactId>course1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>course1</name>
     <description>Course Enrollment System using Spring Boot</description>
 

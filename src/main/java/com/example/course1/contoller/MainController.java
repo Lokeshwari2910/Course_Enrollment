@@ -54,6 +54,12 @@ public class MainController {
     public String showLoginPage() {
         return "login"; // JSP file: /pages/login.jsp
     }
+    
+ // ✅ Student Login form page
+    @GetMapping("/student-login")
+    public String studentLoginPage() {
+        return "student-login"; // JSP file: student-login.jsp
+    }
 
     // Handle login or register
     @PostMapping("/login")

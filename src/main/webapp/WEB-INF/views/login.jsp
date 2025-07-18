@@ -1,109 +1,100 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Login</title>
+    <title>Login Selection</title>
     <style>
         body {
-            background-color: #f5f9ff;
-            font-family: 'Segoe UI', sans-serif;
-            color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f5f9ff;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        /* Header Bar */
         .header {
+            background-color: #e6f0ff;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #e6f0ff;
-            padding: 15px 30px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .header .logo {
+        .logo {
             font-size: 18px;
             font-weight: bold;
             color: #004080;
         }
 
-        .header .title {
+        .title {
             font-size: 20px;
             font-weight: bold;
             color: #004080;
         }
 
-        .header .admin-link a {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            gap: 50px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            width: 220px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #004080;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
             background-color: #004080;
             color: white;
-            padding: 10px 18px;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 14px;
         }
 
-        .header .admin-link a:hover {
-            background-color: #0059b3;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 80px auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #004080;
-            text-align: center;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-
-        button {
-            background-color: #004080;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
+        .card a:hover {
             background-color: #0059b3;
         }
     </style>
 </head>
 <body>
 
-<!-- ✅ Header Section -->
+<!-- ✅ Header -->
 <div class="header">
     <div class="logo">📘 EduLearn</div>
     <div class="title">Course Enrollment</div>
-    <div class="admin-link">
-        <a href="admin">Admin Login</a>
-    </div>
+    <div></div>
 </div>
 
-<!-- ✅ Student Login Form -->
+<!-- ✅ Two Login Options -->
 <div class="container">
-    <h2>Student Login</h2>
-    <form action="login" method="post">
-        <input type="text" name="username" placeholder="Enter Username" required>
-        <input type="email" name="email" placeholder="Enter Email" required>
-        <input type="password" name="password" placeholder="Enter Password" required>
-        <button type="submit">Login</button>
-    </form>
+    <div class="card">
+        <h3>Student Login</h3>
+        <a href="student-login"> Student Login</a>
+    </div>
+
+    <div class="card">
+        <h3>Admin Login</h3>
+        <a href="admin">Admin Login</a>
+    </div>
 </div>
 
 </body>

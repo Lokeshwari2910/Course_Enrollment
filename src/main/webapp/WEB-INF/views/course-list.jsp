@@ -61,7 +61,7 @@
     <br>
     <a class="button-link" href="my-courses">View Enrolled Courses</a><br></br>
     
-    <a class="button-link" href="<c:url value='/' />" style="float: right;">Back to Home</a>
+    <a class="button-link" href="<c:url value='/' />" style="text-align: center; margin-top: 20px;">Back to Home</a>
     
     
     
